@@ -1,0 +1,12 @@
+<h1>スレッド一覧</h1>
+
+<%= link_to "新規作成", "title/create", class: "btn btn-primary" %>
+<ul>
+<% @titles.each do |title| %>
+ <li><%= link_to(title.content,"/titles/#{title.id}/comment") %></li>
+ <% end %>
+</ul>
+<!-- <ul>
+  <li>タイトル1</li>
+  <li>タイトル2</li>
+</ul> -->
