@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get "titles/:id/comment" => "comment#top"
+  get "comment/:id" => "comment#top"
+  get "comment/create" =>"comment#create"
   post "comment/new" => "comment#new"
 
   get "title/create" =>"title#create"

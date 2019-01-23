@@ -1,12 +1,9 @@
 <h1><%= @title.content %></h1>
 <h2>コメント一覧</h2>
 
-<%= form_tag("/comment/new")do %>
-  <textarea name="content"></textarea>
-<p>
-  <input type="submit" value="コメント">
- </p>
-<% end %>
+<%= link_to "コメント作成", "/comment/create", class: "btn btn-primary" %>
+
+
 
 <% @comments.each do |comment| %>
  <li><%= comment.content %></li>
